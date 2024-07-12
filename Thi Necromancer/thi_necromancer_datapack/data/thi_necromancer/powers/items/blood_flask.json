@@ -1,0 +1,47 @@
+{
+  "name": "Blood flask",
+  "description": "To craft a Blood Flask, shift and right-click an empty bottle. This action will draw a small amount of your own blood into the flask, infusing it with potent life force.",
+
+  "type": "origins:active_self",
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:equipped_item_action",
+        "equipment_slot": "mainhand",
+        "action": {
+          "type": "origins:consume",
+          "amount": 1
+        }
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "function thi_necromancer:items/blood_flask/give"
+      },
+      {
+        "type": "origins:damage",
+        "amount": 4,
+        "damage_type": "thi_necromancer:blood_flask"
+      }
+    ]
+
+  },
+  "condition": {
+    "type": "origins:equipped_item",
+    "equipment_slot": "mainhand",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "minecraft:glass_bottle"
+      }
+    }
+  },
+  "cooldown": 20,
+  "hud_render": {
+    "should_render": false
+  },
+  "key": {
+    "key": "key.use",
+    "continuous": false
+  }
+}

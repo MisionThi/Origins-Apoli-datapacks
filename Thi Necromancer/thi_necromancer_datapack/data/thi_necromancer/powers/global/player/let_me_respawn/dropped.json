@@ -1,0 +1,23 @@
+{
+  "type": "origins:action_over_time",
+  "rising_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "say You have been respawned"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "function thi_necromancer:global/player/after_death/let_me_respawn with storage mision_thi:necromancer Player"
+      }
+    ]
+  },
+  "interval": 1,
+  "condition": {
+    "type": "origins:inventory",
+    "process_mode": "items",
+    "comparison": "==",
+    "compare_to": 0
+  }
+}

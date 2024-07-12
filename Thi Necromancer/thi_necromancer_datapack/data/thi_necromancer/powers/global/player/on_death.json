@@ -1,0 +1,64 @@
+{
+  "type": "origins:action_on_death",
+
+  "bientity_condition": {
+    "type": "origins:target_condition",
+      "condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:command",
+            "command": "execute unless entity @s[tag=thi_death_player]",
+            "comparison": "==",
+            "compare_to": 1
+          },
+          {
+            "type": "origins:command",
+            "command": "execute if data storage mision_thi:necromancer Mode{PlayerReviving:1b}",
+            "comparison": "==",
+            "compare_to": 1
+          }
+        ]
+
+      }
+  },
+
+  "bientity_action": {
+    "type": "origins:target_action",
+      "action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:execute_command",
+            "command": "function thi_necromancer:global/player/on_death/setup_before"
+          },
+          {
+            "type": "origins:delay",
+            "ticks": 1,
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:execute_command",
+                  "command": "function thi_necromancer:global/player/teleport with storage mision_thi:necromancer Player.LastDeathLocation"
+                }
+              ]
+            }
+          },
+          {
+            "type": "origins:if_else",
+            "condition": {
+              "type": "origins:command",
+              "command": "execute if data storage mision_thi:necromancer Mode{Hardcore:1b}",
+              "comparison": "==",
+              "compare_to": 1
+            },
+            "if_action": {
+              "type": "origins:execute_command",
+              "command": "gamemode survival @s"
+            }
+          }
+        ]
+      }
+  }
+}

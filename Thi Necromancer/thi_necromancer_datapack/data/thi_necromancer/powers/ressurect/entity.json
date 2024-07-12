@@ -1,0 +1,59 @@
+{
+  "hidden": true,
+  "type": "origins:prevent_entity_use",
+  "bientity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:target_action",
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:execute_command",
+              "command": "execute as @s at @s run function thi_necromancer:global/entity/revive"
+            }
+          ]
+        }
+      },
+      {
+        "type": "origins:actor_action",
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:execute_command",
+              "command": "item modify entity @s weapon.mainhand thi_necromancer:remove_one_item"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "bientity_condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:target_condition",
+        "condition": {
+          "type": "origins:command",
+          "command": "execute if entity @s[tag=thi_statue]",
+          "comparison": "==",
+          "compare_to": 1
+        }
+      }
+    ]
+
+  },
+  "item_condition": {
+    "type": "origins:nbt",
+    "nbt": "{RevivalTome: 1b}"
+  },
+  "hands": [
+      "main_hand"
+  ],
+
+  "condition": {
+    "type": "origins:sneaking"
+  }
+}

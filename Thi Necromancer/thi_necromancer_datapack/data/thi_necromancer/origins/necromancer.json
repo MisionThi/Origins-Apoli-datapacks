@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"thi_necromancer:ressurect/info",
+		"thi_necromancer:ressurect/entity",
+		"thi_necromancer:ressurect/player",
+
+		"thi_necromancer:items/blood_flask",
+		"thi_necromancer:items/revival_tome/craft"
+	],
+	"icon": "minecraft:skeleton_skull",
+	"order": 10,
+	"impact": 2,
+	"name": "Necromancer",
+	"description": "Originates from a dark, mystical background, drawn to the forbidden arts of death and the undead."
+}

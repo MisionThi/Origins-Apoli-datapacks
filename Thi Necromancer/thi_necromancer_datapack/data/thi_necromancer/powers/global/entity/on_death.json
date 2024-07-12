@@ -1,0 +1,64 @@
+{
+  "type": "origins:action_on_death",
+
+  "bientity_condition": {
+    "type": "origins:target_condition",
+      "condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:command",
+            "command": "execute if data entity @s Owner",
+            "comparison": "==",
+            "compare_to": 1
+          },
+          {
+            "type": "origins:command",
+            "command": "execute unless entity @s[tag=thi_statue]",
+            "comparison": "==",
+            "compare_to": 1
+          }
+        ]
+
+      }
+  },
+
+  "bientity_action": {
+    "type": "origins:target_action",
+      "action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:execute_command",
+            "command": "execute as @s at @s run function thi_necromancer:global/entity/types/get"
+          },
+          {
+            "type": "origins:if_else",
+            "condition": {
+              "type": "origins:command",
+              "command": "execute if data storage mision_thi:necromancer Entity{type:\"horse\"}",
+              "comparison": "==",
+              "compare_to": 1
+            },
+            "if_action": {
+              "type": "origins:chance",
+              "action": {
+                "type": "origins:and",
+                "actions": [
+                  {
+                    "type": "origins:execute_command",
+                    "command": "data modify storage mision_thi:necromancer Entity.type set value \"skeleton_horse\""
+                  }
+                ]
+              },
+              "chance": 0.05
+            }
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "execute as @s at @s run function thi_necromancer:global/entity/on_death"
+          }
+        ]
+      }
+  }
+}

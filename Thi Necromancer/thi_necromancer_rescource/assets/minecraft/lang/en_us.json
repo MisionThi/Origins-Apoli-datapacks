@@ -1,0 +1,11 @@
+{
+  "death.attack.no_resurrect": "%s's soul has left the world.",
+  "death.attack.no_resurrect.player": "%s's soul has left the world.",
+
+  "death.attack.blood_flask": "%s took to much of their own blood.",
+  "death.attack.blood_flask.player": "%s took to much of their own blood.",
+
+  "power.thi_necromancer.global/player/ghost_item_use.name": "You can't use this item while a ghost"
+
+
+}

@@ -1,0 +1,6 @@
+{
+    "function": "apoli:add_power",
+    "power": "thi_necromancer:items/revival_tome/upgrade",
+    "slot": "mainhand",
+    "negative": false
+}

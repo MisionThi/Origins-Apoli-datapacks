@@ -1,0 +1,10 @@
+{
+  "entity_types": [
+    "#thi_necromancer:tameable"
+
+  ],
+
+  "powers": [
+    "thi_necromancer:global/entity/on_death"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "entity_types": [
+    "minecraft:player"
+
+  ],
+
+  "powers": [
+    "thi_necromancer:global/player/on_death"
+  ]
+}

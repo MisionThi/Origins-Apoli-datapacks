@@ -1,0 +1,72 @@
+{
+  "hidden": true,
+  "type": "origins:prevent_entity_use",
+  "bientity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:target_action",
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:execute_command",
+              "command": "execute as @e[type=armor_stand,limit=1,sort=nearest,tag=thi_stand] at @s run function thi_necromancer:global/player/item_storage/entity_to_storage"
+            },
+            {
+              "type": "origins:execute_command",
+              "command": "function thi_necromancer:global/player/after_death/revive with storage mision_thi:necromancer Player"
+            }
+          ]
+        }
+      },
+      {
+        "type": "origins:actor_action",
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:execute_command",
+              "command": "item modify entity @s weapon.mainhand thi_necromancer:remove_one_item"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "bientity_condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:target_condition",
+        "condition": {
+          "type": "origins:command",
+          "command": "execute if entity @s[tag=thi_interact_pl]",
+          "comparison": "==",
+          "compare_to": 1
+        }
+      },
+      {
+        "type": "origins:actor_condition",
+        "condition": {
+          "type": "origins:command",
+          "command": "execute unless entity @s[tag=thi_death_player]",
+          "comparison": "==",
+          "compare_to": 1
+        }
+      }
+    ]
+
+  },
+  "item_condition": {
+    "type": "origins:nbt",
+    "nbt": "{RevivalTome: 1b}"
+  },
+  "hands": [
+      "main_hand"
+  ],
+
+  "condition": {
+    "type": "origins:sneaking"
+  }
+}

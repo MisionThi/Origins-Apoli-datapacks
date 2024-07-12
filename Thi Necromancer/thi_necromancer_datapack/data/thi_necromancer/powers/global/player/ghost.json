@@ -1,0 +1,77 @@
+{
+  "type": "origins:multiple",
+
+  "option_to_respawn": {
+    "type": "origins:action_on_callback",
+    "entity_action_gained": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "function thi_necromancer:global/player/ask_respawn/message"
+        }
+      ]
+    }
+  },
+
+  "color": {
+    "type": "origins:model_color",
+    "red": 0.988,
+    "green": 0.952,
+    "blue": 0.948,
+    "alpha": 0.25
+  },
+
+  "entity_collision": {
+    "type": "origins:prevent_entity_collision"
+  },
+
+  "block_place": {
+    "type": "origins:prevent_block_place"
+  },
+
+  "block_place": {
+    "type": "origins:prevent_block_use"
+  },
+
+  "block_break": {
+    "type": "origins:modify_break_speed",
+    "modifier": {
+      "operation": "multiply_base",
+      "value": -1
+    }
+  },
+
+  "entity_use": {
+    "type": "origins:prevent_entity_use"
+  },
+
+  "item_pickup": {
+    "type": "origins:prevent_item_pickup"
+  },
+
+  "item_use": {
+    "type": "origins:prevent_item_use"
+  },
+
+  "sleep": {
+    "type": "origins:prevent_sleep",
+    "message": "You're to scared to sleep"
+  },
+
+  "damage_taken": {
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+      "operation": "multiply_base",
+      "value": -1
+    }
+  },
+
+  "damage_dealt": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "operation": "multiply_base",
+      "value": -1
+    }
+  }
+}

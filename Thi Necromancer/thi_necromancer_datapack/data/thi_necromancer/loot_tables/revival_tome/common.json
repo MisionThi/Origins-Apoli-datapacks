@@ -1,0 +1,117 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cobblestone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:andesite"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:granite"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diorite"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:oak_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dark_oak_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spruce_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:birch_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:acacia_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:deepslate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:calcite"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mangrove_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cherry_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sugar_cane"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bamboo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:magma_block"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherrack"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dirt"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tuff"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cactus"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:kelp"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potato"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wheat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:rotten_flesh"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Revival Tome",
+  "description": "To create an Incomplete Revival Tome, add a drop of your blood to a book in your inventory. This infusion will awaken the tome's latent powers, causing it to reveal a list of specific items required to complete its dark ritual. Gather these components to unlock the tome's full potential and harness its revival magic.",
+
+  "type": "origins:item_on_item",
+  "on_item_condition": {
+    "type": "origins:ingredient",
+    "ingredient": {
+      "item": "minecraft:book"
+    }
+  },
+  "using_item_condition": {
+    "type": "origins:nbt",
+    "nbt": "{thi_bloodflask: 1b}"
+  },
+  "entity_action": {
+    "type": "origins:execute_command",
+    "command": "function thi_necromancer:items/revival_tome/give_incomplete"
+  },
+  "using_item_action": {
+    "type": "origins:consume",
+    "amount": 1
+  },
+
+  "on_item_action": {
+    "type": "origins:consume",
+    "amount": 1
+  }
+}
