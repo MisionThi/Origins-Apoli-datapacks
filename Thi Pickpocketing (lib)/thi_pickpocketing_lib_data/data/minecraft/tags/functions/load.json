@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "thi_endergui:setup",
+    "thi_player_name:setup",
+    "thi_pocket_gui:init"
+  ]
+}

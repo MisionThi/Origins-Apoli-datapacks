@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/thi_pickpocket/symbols/root",
+	"textures": {
+		"texture": "item/thi_pickpocket/symbols/empty_armor_slot_helmet"
+	}
+}

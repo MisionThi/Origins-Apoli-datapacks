@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"texture": "item/thi_pickpocket/symbols/arrow_up"
+	},
+	"elements": [
+		{
+			"name": "PlaneX1",
+			"from": [7.25, 0, -0.25],
+			"to": [7.251, 16, 15.75],
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#texture"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#texture"}
+			}
+		}
+	],
+	"display": {
+		"gui": {
+			"rotation": [0, -90, 0],
+			"translation": [-0.25, 1, 10]
+		}
+	}
+}

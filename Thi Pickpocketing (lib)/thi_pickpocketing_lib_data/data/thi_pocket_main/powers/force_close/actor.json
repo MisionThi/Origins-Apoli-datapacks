@@ -1,0 +1,127 @@
+{
+  "type": "origins:multiple",
+
+  "leave_world_resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+
+  "on_death": {
+    "type": "origins:action_on_death",
+    "bientity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:target_action",
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:execute_command",
+                "command": "#say actor died"
+              },
+              {
+                "type": "origins:change_resource",
+                "resource": "*:*_leave_world_resource",
+                "change": 1,
+                "operation": "set"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "data modify storage thi_endergui:storage Temp.UUID set from entity @s UUID"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "power revoke @s thi_endergui:close_gui"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "function thi_endergui:endergui/close/clear_storage"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "function #thi_endergui:gui_closed"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_leave_world_resource",
+      "comparison": "==",
+      "compare_to": 0
+    }
+  },
+
+  "left_world": {
+    "type": "origins:action_on_callback",
+    "entity_action_removed": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_leave_world_resource",
+          "change": 1,
+          "operation": "set"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "data modify storage thi_endergui:storage Temp.UUID set from entity @s UUID"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "power revoke @s thi_endergui:close_gui"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "function thi_endergui:endergui/close/clear_storage"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "function #thi_endergui:gui_closed"
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_leave_world_resource",
+      "comparison": "==",
+      "compare_to": 0
+    }
+  },
+
+
+  "auto_remove": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "function #thi_pocket_main:actor_close"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "power revoke @s thi_pocket_main:force_close/actor"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "tag @s remove thi_pickpocketing"
+        }
+      ]
+    },
+    "interval": 20,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_leave_world_resource",
+      "comparison": "==",
+      "compare_to": 1
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "thi_endergui:storage"
+    },
+    "ops": [
+      {
+        "source": "Temp.setup.type",
+        "target": "type",
+        "op": "replace"
+      }
+    ]
+  }
+]

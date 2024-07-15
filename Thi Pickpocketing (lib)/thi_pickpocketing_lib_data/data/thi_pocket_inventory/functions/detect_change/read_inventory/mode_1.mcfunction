@@ -1,0 +1,26 @@
+# By mision_thi
+
+data modify storage thi_endergui:storage Temp.inventory.read set value []
+
+# Store the first 21 slots
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:9b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:10b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:11b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:12b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:13b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:14b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:15b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:16b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:17b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:18b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:19b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:20b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:21b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:22b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:23b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:24b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:25b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:26b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:27b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:28b}]
+data modify storage thi_endergui:storage Temp.inventory.read append from entity @s Inventory[{Slot:29b}]

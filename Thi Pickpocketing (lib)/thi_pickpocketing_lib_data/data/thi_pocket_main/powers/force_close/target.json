@@ -1,0 +1,159 @@
+{
+  "type": "origins:multiple",
+
+  "leave_world_resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+
+  "on_death": {
+    "type": "origins:action_on_death",
+    "bientity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:target_action",
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:change_resource",
+                "resource": "*:*_leave_world_resource",
+                "change": 1,
+                "operation": "set"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "#say target died"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "data modify storage thi_endergui:storage Temp.UUID set from entity @s UUID"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "function thi_pocket_main:api/force_close/target with storage thi_endergui:storage Temp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_leave_world_resource",
+      "comparison": "==",
+      "compare_to": 0
+    }
+  },
+
+  "left_world": {
+    "type": "origins:action_on_callback",
+    "entity_action_removed": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_leave_world_resource",
+          "change": 1,
+          "operation": "set"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "#say target left world"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "data modify storage thi_endergui:storage Temp.UUID set from entity @s UUID"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "function thi_pocket_main:api/force_close/target with storage thi_endergui:storage Temp"
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_leave_world_resource",
+      "comparison": "==",
+      "compare_to": 0
+    }
+  },
+
+  "out_of_range": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_leave_world_resource",
+          "change": 1,
+          "operation": "set"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "#say out of range"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "data modify storage thi_endergui:storage Temp.UUID set from entity @s UUID"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "function thi_pocket_main:api/force_close/target with storage thi_endergui:storage Temp"
+        }
+      ]
+    },
+    "interval": 20,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:command",
+          "command": "execute unless entity @a[sort=nearest,tag=thi_pickpocketing,distance=0..5,limit=1]",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_leave_world_resource",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+
+  "auto_remove": {
+    "type": "origins:action_over_time",
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "function #thi_pocket_main:target_close"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "power revoke @s thi_pocket_main:force_close/target"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "tag @s remove thi_pickpocketed"
+        }
+      ]
+    },
+    "interval": 20,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_leave_world_resource",
+      "comparison": "==",
+      "compare_to": 1
+    }
+  }
+}

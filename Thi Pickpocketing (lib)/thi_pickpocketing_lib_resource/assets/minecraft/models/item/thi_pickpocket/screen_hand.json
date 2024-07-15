@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/thi_pickpocket/root",
+  "textures": {
+    "texture": "item/thi_pickpocket/screen_hand"
+  }
+}

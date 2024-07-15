@@ -1,0 +1,15 @@
+{
+        "parent": "item/generated",
+        "textures": {
+                "layer0": "item/knowledge_book"
+	},
+	"overrides": [
+        {"predicate": {"custom_model_data": 40501}, "model": "item/thi_pickpocket/symbols/arrow_up"},
+        {"predicate": {"custom_model_data": 40502}, "model": "item/thi_pickpocket/symbols/arrow_down"},
+        {"predicate": {"custom_model_data": 40503}, "model": "item/thi_pickpocket/symbols/empty_armor_slot_shield"},
+        {"predicate": {"custom_model_data": 40504}, "model": "item/thi_pickpocket/symbols/empty_slot_pickaxe"},
+        {"predicate": {"custom_model_data": 40505}, "model": "item/thi_pickpocket/symbols/empty_armor_slot_helmet"},
+        {"predicate": {"custom_model_data": 40506}, "model": "item/thi_pickpocket/symbols/empty_slot_diamond"},
+        {"predicate": {"custom_model_data": 40507}, "model": "item/thi_pickpocket/symbols/arrow_left"}
+      ]
+}

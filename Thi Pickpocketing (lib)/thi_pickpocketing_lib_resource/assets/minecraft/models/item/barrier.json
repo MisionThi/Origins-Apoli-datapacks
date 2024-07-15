@@ -1,0 +1,14 @@
+{
+        "parent": "item/generated",
+        "textures": {
+                "layer0": "item/barrier"
+	},
+	"overrides": [
+        {"predicate": {"custom_model_data": 40400}, "model": "item/thi_pickpocket/screen_menu"},
+        {"predicate": {"custom_model_data": 40401}, "model": "item/thi_pickpocket/screen_hotbar"},
+        {"predicate": {"custom_model_data": 40402}, "model": "item/thi_pickpocket/screen_armor"},
+        {"predicate": {"custom_model_data": 40403}, "model": "item/thi_pickpocket/screen_inventory"},
+        {"predicate": {"custom_model_data": 40404}, "model": "item/thi_pickpocket/screen_inventory_2"},
+        {"predicate": {"custom_model_data": 40405}, "model": "item/thi_pickpocket/screen_hand"}
+      ]
+}
