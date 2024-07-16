@@ -1,0 +1,44 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "player_compass:storage"
+    },
+    "ops": [
+      {
+        "source": "tag.LodestonePos",
+        "target": "LodestonePos",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "player_compass:storage"
+    },
+    "ops": [
+      {
+        "source": "tag.LodestoneDimension",
+        "target": "LodestoneDimension",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "player_compass:storage"
+    },
+    "ops": [
+      {
+        "source": "tag.LodestoneTracked",
+        "target": "LodestoneTracked",
+        "op": "replace"
+      }
+    ]
+  }
+]

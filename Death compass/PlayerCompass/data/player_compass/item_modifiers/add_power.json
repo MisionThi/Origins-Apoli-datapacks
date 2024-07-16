@@ -1,0 +1,6 @@
+{
+  "function": "apoli:add_power",
+  "power": "player_compass:player_compass",
+  "slot": "mainhand",
+  "negative": false
+}

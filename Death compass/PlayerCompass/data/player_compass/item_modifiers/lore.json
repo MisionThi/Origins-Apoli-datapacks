@@ -1,0 +1,21 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "You're tracking: ",
+        "color": "gray",
+        "italic": false,
+        "extra": [
+          {
+            "nbt": "PlayerName",
+            "storage": "player_compass:storage",
+            "color": "aqua"
+          }
+        ]
+      }
+    ],
+    "replace": true
+  }
+]
